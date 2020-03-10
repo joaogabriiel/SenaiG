@@ -10,10 +10,12 @@
     <unique-id>204464236bjbk</unique-id>
     <saved-with-version>27700</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Pathfinding" version="1">Pathfinding</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -80,8 +82,8 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="826898677393658" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\kleber4855\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_front.png">
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="0" repeatto="0" sid="826898677393658" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_stand.png">
                         <collision-poly>
                             <point x="0.151515" y="0.108696" />
                             <point x="0.5" y="0" />
@@ -94,13 +96,117 @@
                         </collision-poly>
                     </frame>
                 </animation>
+                <animation framecount="11" loop="1" name="andando" pingpong="0" repeatcount="0" repeatto="0" sid="435359098600321" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk11.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="pulando" pingpong="0" repeatcount="0" repeatto="0" sid="810996882395338" speed="0">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.5" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_jump.png">
+                        <collision-poly>
+                            <point x="0.149254" y="0.106383" />
+                            <point x="0.492537" y="0" />
+                            <point x="0.850746" y="0.106383" />
+                            <point x="0.925373" y="0.5" />
+                            <point x="0.865672" y="0.904255" />
+                            <point x="0.492537" y="0.882979" />
+                            <point x="0.223881" y="0.840426" />
+                            <point x="0.0447761" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="caindo" pingpong="0" repeatcount="0" repeatto="0" sid="689088881255975" speed="0">
+                    <frame duration="1" hotspotX="0.507246" hotspotY="0.5" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_hurt.png">
+                        <collision-poly>
+                            <point x="0.15942" y="0.119565" />
+                            <point x="0.492754" y="0" />
+                            <point x="0.855072" y="0.108696" />
+                            <point x="0.942029" y="0.5" />
+                            <point x="0.913043" y="0.934783" />
+                            <point x="0.492754" y="0.98913" />
+                            <point x="0.231884" y="0.826087" />
+                            <point x="0.0869565" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="13" loop="0" name="esquerda" pingpong="0" repeatcount="1" repeatto="0" sid="749791243539155" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p2_walk\p2_walk.png">
+                        <collision-poly>
+                            <point x="0.0255906" y="0.0451389" />
+                            <point x="0.5" y="0.0173611" />
+                            <point x="0.980315" y="0.0347222" />
+                            <point x="0.992126" y="0.5" />
+                            <point x="0.751969" y="0.5625" />
+                            <point x="0.5" y="0.645833" />
+                            <point x="0.0275591" y="0.951389" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.0255906" y="0.0451389" />
+                            <point x="0.5" y="0.0173611" />
+                            <point x="0.980315" y="0.0347222" />
+                            <point x="0.992126" y="0.5" />
+                            <point x="0.751969" y="0.5625" />
+                            <point x="0.5" y="0.645833" />
+                            <point x="0.0275591" y="0.951389" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk02.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk03.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk04.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk05.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk06.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk07.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk08.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk09.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk10.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505155" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Player\p1_walk\PNG\p1_walk11.png" />
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="inimigo" sid="939136079719026">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pathfinding" sid="373475103049937">
+                    <behavior id="Pathfinding" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="985068838680973" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="1" repeatto="0" sid="985068838680973" speed="5">
+                    <frame duration="1" hotspotX="0.518519" hotspotY="0.516129" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Enemies\snailWalk1.png">
+                        <collision-poly>
+                            <point x="0.0392157" y="0.0392157" />
+                            <point x="0.490196" y="0" />
+                            <point x="0.941176" y="0.0588235" />
+                            <point x="1" y="0.490196" />
+                            <point x="0.941176" y="0.941176" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.0588235" y="0.941176" />
+                            <point x="0" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="andando" pingpong="0" repeatcount="1" repeatto="0" sid="950671035355704" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.516129" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Enemies\snailWalk2.png">
+                        <collision-poly>
+                            <point x="0.0113314" y="0.0261438" />
+                            <point x="0.498584" y="0.00653595" />
+                            <point x="0.977337" y="0.0522876" />
+                            <point x="0.997167" y="0.496732" />
+                            <point x="0.98017" y="0.954248" />
+                            <point x="0.00566572" y="0.986928" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -115,6 +221,65 @@
         <object-type name="placar" sid="409028127313089">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Sprite" sid="143196119121839">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="829616625204521" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="494309641881708">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="1" repeatto="0" sid="688926743848255" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.509804" original-source="C:\Users\Aluno30\Desktop\Sprite\kenney-platformer-art-base-pack\Enemies\blockerMad.png">
+                        <collision-poly>
+                            <point x="0.0392157" y="0.0392157" />
+                            <point x="0.490196" y="0" />
+                            <point x="0.941176" y="0.0588235" />
+                            <point x="1" y="0.490196" />
+                            <point x="0.941176" y="0.941176" />
+                            <point x="0.490196" y="1" />
+                            <point x="0.0588235" y="0.941176" />
+                            <point x="0" y="0.490196" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vida" sid="677193261846591">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="760958094573785">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="0" name="vida" pingpong="0" repeatcount="0" repeatto="0" sid="659480191076582" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="1.10909" hotspotY="0.510638" />
+                    <frame duration="1" hotspotX="0.648148" hotspotY="0.510638" />
+                    <frame duration="1" hotspotX="0.503106" hotspotY="0.510638" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="heroi2" sid="584687101345653">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="494634572376976">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="631211189540603" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="919173174186164">
+            <plugin id="Keyboard" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -123,7 +288,9 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="11" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
