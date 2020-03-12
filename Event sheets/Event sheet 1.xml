@@ -116,7 +116,7 @@
         </event-block>
         <event-block sid="895290632860573">
             <conditions>
-                <condition id="0" name="On key pressed" sid="597739815954803" type="Keyboard">
+                <condition id="2" name="Key is down" sid="597739815954803" type="Keyboard">
                     <param id="0" name="Key">37</param>
                 </condition>
             </conditions>
@@ -128,7 +128,7 @@
         </event-block>
         <event-block sid="915561723073922">
             <conditions>
-                <condition id="0" name="On key pressed" sid="806151634035658" type="Keyboard">
+                <condition id="2" name="Key is down" sid="806151634035658" type="Keyboard">
                     <param id="0" name="Key">39</param>
                 </condition>
             </conditions>
